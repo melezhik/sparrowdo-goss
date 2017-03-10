@@ -1,0 +1,5 @@
+use Template::Mustache;
+
+module_run 'Goss', 'mysql tcp port check',  
+Template::Mustache.render('mysql.goss.yaml'.IO.slurp, {  port => '3306' })
+
