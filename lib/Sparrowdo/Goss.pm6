@@ -4,11 +4,11 @@ unit module Sparrowdo::Goss;
 
 use Sparrowdo;
 
-our sub tasks ($title,$yaml) {
+our sub tasks (%args) {
 
-  task-run $title, 'goss', %( 
-    action  => 'validate' , 
-    goss => $yaml 
+  task-run %args<title>, 'goss', %( 
+    action  => 'validate', 
+    goss => %args<yaml> 
   );
 } 
 

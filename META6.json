@@ -13,7 +13,7 @@
         "source" : "https://github.com/melezhik/sparrowdo-goss.git"
     },
    "provides" : {
-        "Sparrowdo::Ruby::Bundler" : "lib/Sparrowdo/Goss.pm6"
+        "Sparrowdo::Goss" : "lib/Sparrowdo/Goss.pm6"
   },
   "source-url"  : "https://github.com/melezhik/sparrowdo-goss.git"
 }
