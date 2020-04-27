@@ -9,7 +9,7 @@ Sparrowdo module to run goss scenarios.
 
 # INSTALL
 
-    $ panda install Sparrowdo::Goss
+    $ zef install Sparrowdo::Goss
 
 # USAGE
 
@@ -17,19 +17,19 @@ Here are few examples.
 
 ## Install goss binary
 
-    $ cat sparrowfile
+    $ cat mysql.goss.yaml
 
-    module_run 'Goss', %( action => 'install' ); # will install into default location - /usr/bin/goss
+    module-run 'Goss', %( action => 'install' ); # will install into default location - /usr/bin/goss
 
-    module_run 'Goss', %( action => 'install', install_path => '/home/user' ); # will install into users location - /home/user/bin
+    module-run 'Goss', %( action => 'install', install_path => '/home/user' ); # will install into users location - /home/user/bin
 
 ## Runs goss scenarios
 
-Pass goss ymal as is:
+Pass goss yaml as is:
 
-    $ cat sparrowfile
+    $ cat mysql.goss.yaml
 
-    module_run 'Goss', %( title => 'mysql checks',  yaml => << q:to/HERE/);
+    module-run 'Goss', %( title => 'mysql checks',  yaml => << q:to/HERE/);
       port:
         tcp:3306:
           listening: true
@@ -57,7 +57,7 @@ Use your favorite templater to populate goss yamls:
 
     use Template::Mustache;
 
-    module_run 'Goss', %( 
+    module-run 'Goss', %( 
       title => 'mysql tcp port check',  
       yaml => Template::Mustache.render('mysql.goss.yaml'.IO.slurp, {  port => '3306' })
     );
@@ -65,7 +65,7 @@ Use your favorite templater to populate goss yamls:
 
 Sets path to goss binary:
 
-    module_run 'Goss', %( install_path => '/home/user', yaml => '...', title => '...'  );
+    module-run 'Goss', %( install_path => '/home/user', yaml => '...', title => '...'  );
 
 # Author
 

@@ -2,6 +2,10 @@ Revision history for Sparrowdo::Goss
 
 {{$NEXT}}
 
+0.0.3  2020-04-27T18:28:42Z
+
+  - Documentation fixes
+
 0.0.2  2020-04-27T17:40:34Z
 
   - Port to Sparrow6/Raku
