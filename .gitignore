@@ -1,1 +1,5 @@
-lib/.precomp
+lib/.precomp/
+.precomp
+*.tar.gz
+Sparrowdo-Goss-*
+.cache

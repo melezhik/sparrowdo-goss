@@ -5,7 +5,7 @@
   "description" : "Sparrowdo module to run goss scenarios",
   "authors" : [ "Alexey Melezhik" ],
   "depends"     : [
-                    "Sparrowdo"
+                    "Sparrow6"
                   ],
   "source-type" : "git",
   "support" : {
@@ -13,6 +13,7 @@
         "source" : "https://github.com/melezhik/sparrowdo-goss.git"
     },
    "provides" : {
+        "Sparrow6::Goss" : "lib/Sparrow6/Goss.pm6",
         "Sparrowdo::Goss" : "lib/Sparrowdo/Goss.pm6"
   },
   "source-url"  : "https://github.com/melezhik/sparrowdo-goss.git"

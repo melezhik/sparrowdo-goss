@@ -1,9 +1,12 @@
 use Template::Mustache;
 
-module_run 'Goss', %( action => 'install' );
+zef 'Template::Mustache', %( notest => True );
 
-module_run 'Goss', %(
-  title => 'mysql tcp port check',  
+module-run 'Goss', %( action => 'install', install_path => '/tmp' );
+
+module-run 'Goss', %(
+  title => 'mysql tcp port check',
+  install_path => '/tmp',  
   yaml  => Template::Mustache.render('mysql.goss.yaml'.IO.slurp, {  port => '3306' })
 )
 
